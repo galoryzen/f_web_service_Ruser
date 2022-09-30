@@ -17,7 +17,6 @@ class UserRepository {
     logInfo("Getting user from remote");
     RandomUser user = await userRemoteDataSource.getUser();
     logInfo("Got user from remote");
-    print(user.email);
     userLocalDataSource.addUser(user);
     return true;
   }
